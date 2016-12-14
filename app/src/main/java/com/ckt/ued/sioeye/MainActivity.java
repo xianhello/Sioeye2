@@ -1,86 +1,86 @@
 package com.ckt.ued.sioeye;
 
-import android.app.Activity;
-import android.support.v4.view.PagerAdapter;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
+import com.ckt.ued.sioeye.fragment.FindFragment;
+import com.ckt.ued.sioeye.fragment.FocusFragment;
+import com.ckt.ued.sioeye.fragment.MeFragment;
 import com.gigamole.navigationtabbar.ntb.NavigationTabBar;
 
 import java.util.ArrayList;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_horizontal_ntb);
+        setContentView(R.layout.activity_main);
         initUI();
+        initNavigationTabBar();
     }
 
     private void initUI() {
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.vp_horizontal_ntb);
-        viewPager.setAdapter(new PagerAdapter() {
+        viewPager = (ViewPager) findViewById(R.id.vp_horizontal_ntb);
+        FragmentPagerAdapter fragmentPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
+            @Override
+            public Fragment getItem(int position) {
+                Fragment fragment = null;
+                switch (position) {
+                    case 0:
+                        fragment = new FindFragment();
+                        break;
+                    case 1:
+                        fragment = new FocusFragment();
+                        break;
+                    case 2:
+                        fragment = new MeFragment();
+                        break;
+                }
+                return fragment;
+            }
+
             @Override
             public int getCount() {
                 return 3;
             }
+        };
+        viewPager.setAdapter(fragmentPagerAdapter);
+    }
 
-            @Override
-            public boolean isViewFromObject(final View view, final Object object) {
-                return view.equals(object);
-            }
-
-            @Override
-            public void destroyItem(final View container, final int position, final Object object) {
-                ((ViewPager) container).removeView((View) object);
-            }
-
-            @Override
-            public Object instantiateItem(final ViewGroup container, final int position) {
-                final View view = LayoutInflater.from(
-                        getBaseContext()).inflate(R.layout.item_vp, null, false);
-
-                container.addView(view);
-                return view;
-            }
-        });
-
+    private void initNavigationTabBar() {
         final int colorBottom = getResources().getColor(R.color.colorBottom);
-
         final NavigationTabBar navigationTabBar = (NavigationTabBar) findViewById(R.id.ntb_horizontal);
         navigationTabBar.setBgColor(getResources().getColor(R.color.colorBg));
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.ic_first),
+                        getResources().getDrawable(R.drawable.find_normal),
                         colorBottom)
-                        .selectedIcon(getResources().getDrawable(R.drawable.ic_sixth))
-                        .title("Find")
+                        .title(getResources().getString(R.string.find))
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.ic_second),
                         colorBottom)
-                        .title("Focus")
+                        .title(getResources().getString(R.string.focus))
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.ic_third),
+                        getResources().getDrawable(R.drawable.profile_normal),
                         colorBottom)
-                        .selectedIcon(getResources().getDrawable(R.drawable.ic_seventh))
-                        .title("Me")
+                        .title(getResources().getString(R.string.me))
                         .build()
         );
 
         navigationTabBar.setModels(models);
-        navigationTabBar.setViewPager(viewPager, 2);
+        navigationTabBar.setViewPager(viewPager);
         navigationTabBar.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(final int position, final float positionOffset, final int positionOffsetPixels) {

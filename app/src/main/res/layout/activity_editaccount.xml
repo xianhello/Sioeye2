@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:scrollbars="none">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<View
+				android:background="@color/colorWhite"
+				android:layout_width="fill_parent"
+				android:layout_height="1.0dip" />
+			<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/rl_user"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/setting_item_selector">
+				<TextView
+					style="@style/TxtTitle"
+					android:textSize="16sp"
+					android:gravity="center_vertical"
+					android:background="@drawable/setting_item_selector"
+					android:layout_width="fill_parent"
+					android:layout_height="50dp"
+					android:paddingLeft="16dp"
+					android:paddingRight="16dp"
+					android:paddingTop="16dp"
+					android:text="@string/avatar" />
+				<ImageView
+					android:id="@+id/head"
+					android:layout_marginRight="10dp"
+					android:layout_marginLeft="10dp"
+					android:layout_width="80.0dip"
+					android:layout_height="80.0dip"
+					android:layout_alignRight="@+id/right"
+					android:paddingRight="10dp"
+					android:src="@drawable/head" />
+
+				<ImageView
+					android:id="@+id/right"
+					android:layout_marginRight="15dp"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/right" />
+
+			</RelativeLayout>
+			<View
+				android:background="@color/colorWhite"
+				android:layout_width="fill_parent"
+				android:layout_height="1.0dip" />
+
+
+			<TextView
+				android:id="@+id/tv_nickname"
+				style="@style/TxtTitle"
+				android:textSize="16sp"
+				android:gravity="center_vertical"
+				android:background="@drawable/setting_item_selector"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:drawablePadding="10dp"
+				android:drawableRight="@drawable/right"
+				android:text="@string/nickname" />
+			<View
+				android:background="@color/colorWhite"
+				android:layout_width="fill_parent"
+				android:layout_height="1.0dip" />
+			<TextView
+				android:id="@+id/rv_gender"
+				style="@style/TxtTitle"
+				android:textSize="16sp"
+				android:gravity="center_vertical"
+				android:background="@drawable/setting_item_selector"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:drawablePadding="10dp"
+				android:drawableRight="@drawable/right"
+				android:text="@string/gender" />
+			<View
+				android:background="@color/colorWhite"
+				android:layout_width="fill_parent"
+				android:layout_height="1.0dip" />
+
+			<TextView
+				android:id="@+id/tv_address"
+				style="@style/TxtTitle"
+				android:textSize="16sp"
+				android:gravity="center_vertical"
+				android:background="@drawable/setting_item_selector"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:drawablePadding="10dp"
+				android:drawableRight="@drawable/right"
+				android:text="@string/address" />
+			<View
+				android:background="@color/colorWhite"
+				android:layout_width="fill_parent"
+				android:layout_height="1.0dip" />
+
+			<TextView
+				android:id="@+id/tv_hobby"
+				style="@style/TxtTitle"
+				android:textSize="16sp"
+				android:gravity="center_vertical"
+				android:background="@drawable/setting_item_selector"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:drawablePadding="10dp"
+				android:drawableRight="@drawable/right"
+				android:text="@string/hobby" />
+			<View
+				android:background="@color/colorWhite"
+				android:layout_width="fill_parent"
+				android:layout_height="1.0dip" />
+			<TextView
+				android:id="@+id/tv_signature"
+				style="@style/TxtTitle"
+				android:textSize="16sp"
+				android:gravity="center_vertical"
+				android:background="@drawable/setting_item_selector"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:drawablePadding="10dp"
+				android:drawableRight="@drawable/right"
+				android:text="@string/signature" />
+			<View
+				android:background="@color/colorWhite"
+				android:layout_width="fill_parent"
+				android:layout_height="1.0dip" />
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

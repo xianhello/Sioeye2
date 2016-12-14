@@ -1,4 +1,24 @@
 <resources>
     <string name="app_name">Sioeye</string>
 
+    <string name="find">发现</string>
+    <string name="focus">关注</string>
+    <string name="me">我</string>
+
+    <string name="profile">直播配置</string>
+    <string name="mycode">我的二维码</string>
+    <string name="message">消息</string>
+    <string name="settings">设置</string>
+    <string name="feedback">意见反馈</string>
+    <string name="check_update">检查更新</string>
+    <string name="help_center">帮助中心</string>
+    <string name="about_sioeye">关于Sioeye</string>
+    <string name="avatar">头像</string>
+    <string name="nickname">昵称</string>
+    <string name="gender">性别</string>
+    <string name="address">地址</string>
+    <string name="hobby">爱好</string>
+    <string name="signature">个性签名</string>
+    <string name="live">直播</string>
+    <string name="fans">粉丝</string>
 </resources>

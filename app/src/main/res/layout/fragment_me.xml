@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:scrollbars="none">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+ 	<View
+	 android:background="@color/colorWhite"
+	 android:layout_width="fill_parent"
+	 android:layout_height="1.0dip" />
+	    <RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="5dp"
+				android:paddingBottom="5dp"
+				android:id="@+id/rl_user"
+				android:layout_marginTop="10dp"
+				android:background="@drawable/setting_item_selector">
+			<ImageView
+				android:id="@+id/head"
+				android:layout_marginRight="10dp"
+				android:layout_marginLeft="10dp"
+				android:layout_width="80.0dip"
+				android:layout_height="80.0dip"
+				android:src="@drawable/head" />
+			<TextView
+				android:textSize="18.0dip"
+				android:id="@+id/tv_name"
+				android:layout_marginTop="20dp"
+				android:layout_toRightOf="@+id/head"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="xxx" />
+			<TextView
+				android:id="@+id/tv_msg"
+				android:textSize="14.0dip"
+				style="@style/txt_ContextStyle1"
+				android:layout_marginTop="10dp"
+				android:layout_below="@+id/tv_name"
+				android:layout_toRightOf="@+id/head"
+				android:text="个性签名：ckt" />
+
+			<ImageView
+				android:layout_marginRight="15dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/right" />
+
+			<ImageView
+				android:id="@+id/iv_sex"
+				android:layout_toRightOf="@+id/tv_name"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:layout_marginTop="22dp"
+				android:layout_marginLeft="5dp"
+				android:src="@drawable/ic_sex_female" />
+			</RelativeLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:background="@drawable/setting_item_selector"
+			android:paddingBottom="5dp"
+			>
+			<RelativeLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:paddingLeft="30dp"
+				>
+			<TextView
+				android:id="@+id/live_count"
+				style="@style/TxtTitle"
+				android:layout_width="wrap_content"
+				android:textSize="16sp"
+				android:paddingLeft="15dp"
+				android:text="0"
+				android:gravity="center_vertical"
+				/>
+				<TextView
+					android:layout_below="@+id/live_count"
+					style="@style/TxtTitle"
+					android:layout_width="wrap_content"
+					android:textSize="16sp"
+					android:text="@string/live"
+					android:gravity="center_vertical"
+					/>
+				</RelativeLayout>
+			<RelativeLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:paddingLeft="30dp"
+				>
+				<TextView
+					android:id="@+id/focus_count"
+					style="@style/TxtTitle"
+					android:layout_width="wrap_content"
+					android:textSize="16sp"
+					android:paddingLeft="15dp"
+					android:text="0"
+					android:gravity="center_vertical"
+					/>
+				<TextView
+					android:layout_below="@+id/focus_count"
+					style="@style/TxtTitle"
+					android:layout_width="wrap_content"
+					android:textSize="16sp"
+					android:text="@string/focus"
+					android:gravity="center_vertical"
+					/>
+			</RelativeLayout>
+			<RelativeLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical"
+				android:paddingLeft="30dp"
+				>
+				<TextView
+					android:id="@+id/fans_count"
+					style="@style/TxtTitle"
+					android:layout_width="wrap_content"
+					android:textSize="16sp"
+					android:paddingLeft="15dp"
+					android:text="0"
+					android:gravity="center_vertical"
+					/>
+				<TextView
+					android:layout_below="@+id/fans_count"
+					style="@style/TxtTitle"
+					android:layout_width="wrap_content"
+					android:textSize="16sp"
+					android:text="@string/fans"
+					android:gravity="center_vertical"
+					/>
+			</RelativeLayout>
+		</LinearLayout>
+
+		<View
+			android:background="@color/colorWhite"
+			android:layout_marginTop="20dp"
+			android:layout_width="fill_parent"
+			android:layout_height="1.0dip" />
+			<TextView
+				android:id="@+id/tv_profile"
+				style="@style/TxtTitle"
+				android:textSize="16sp"
+				android:gravity="center_vertical"
+				android:background="@drawable/setting_item_selector"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:drawablePadding="10dp"
+				android:drawableLeft="@drawable/icon_me_photo"
+				android:drawableRight="@drawable/right"
+				android:text="@string/profile" />
+			<View
+				android:background="@color/colorWhite"
+				android:layout_width="fill_parent"
+				android:layout_height="1.0dip" />
+			<TextView
+				android:id="@+id/tv_code"
+				style="@style/TxtTitle"
+				android:textSize="16sp"
+				android:gravity="center_vertical"
+				android:background="@drawable/setting_item_selector"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:drawablePadding="10dp"
+				android:drawableLeft="@drawable/icon_code"
+				android:drawableRight="@drawable/right"
+				android:text="@string/mycode" />
+			<View
+				android:background="@color/colorWhite"
+				android:layout_width="fill_parent"
+				android:layout_height="1.0dip" />
+
+			<TextView
+				android:id="@+id/tv_message"
+				style="@style/TxtTitle"
+				android:textSize="16sp"
+				android:gravity="center_vertical"
+				android:background="@drawable/setting_item_selector"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="16dp"
+				android:drawablePadding="10dp"
+				android:drawableLeft="@drawable/icon_me_money"
+				android:drawableRight="@drawable/right"
+				android:text="@string/message" />
+
+			<TextView
+				android:id="@+id/tv_setting"
+				style="@style/TxtTitle"
+				android:textSize="16sp"
+				android:gravity="center_vertical"
+				android:background="@drawable/setting_item_selector"
+				android:layout_width="fill_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="16dp"
+				android:paddingRight="10dp"
+				android:layout_marginTop="20dp"
+				android:drawablePadding="10dp"
+				android:drawableLeft="@drawable/icon_me_setting"
+				android:drawableRight="@drawable/right"
+				android:text="@string/settings" />
+			<View
+				android:background="@color/colorWhite"
+				android:layout_width="fill_parent"
+				android:layout_height="1.0dip" />
+	</LinearLayout>
+	</ScrollView>
+</LinearLayout>

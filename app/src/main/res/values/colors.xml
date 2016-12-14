@@ -6,4 +6,8 @@
 
     <color name="colorBottom">#76afcf</color>
     <color name="colorBg">#FFFFFF</color>
+
+    <color name="colorWhite">#ffeeeeee</color>
+    <color name="white">#ffffff</color>
+    <color name="colorRed">#FC2828</color>
 </resources>
